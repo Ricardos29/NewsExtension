@@ -52,6 +52,7 @@ class PostController extends Controller
     // Store Post
     public function update(Request $request, Post $post)
     {
+        dd($request->all(), $post);
         $validated = $request->validate([
             'title' => 'required',
             'body' => 'required'
